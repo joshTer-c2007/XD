@@ -45,3 +45,23 @@ function calcularSueldo() {
     deshabilitarComponente("btnCalcular");
     habilitarComponente("btnLimpiar");
 }
+// Punto 9: Limpiar y habilitar componentes para un nuevo cálculo [cite: 76]
+function crearNuevo() {
+    habilitarComponente("btnCalcular");    // [cite: 77]
+    deshabilitarComponente("btnLimpiar"); // [cite: 78]
+    
+    // Habilitar y limpiar cajas de texto [cite: 79, 80]
+    habilitarComponente("txtVentas");
+    habilitarComponente("txtNombre");
+    habilitarComponente("txtApellido");
+    
+    limpiarCaja("txtVentas");
+    limpiarCaja("txtNombre");
+    limpiarCaja("txtApellido");
+    
+    // Limpiar visualización de estrellas y mensajes [cite: 81, 82, 83]
+    pintarEstrellas(0); 
+    mostrarTexto("lblBono", "0.00");
+    mostrarTexto("lblSueldoTotal", "0.00");
+    mostrarTexto("lblMensaje", "");
+}
